@@ -1,0 +1,31 @@
+imageType:
+  Original: {}
+  LoG:
+    sigma: [0.5, 1.0, 1.5, 2.0, 3.0]
+  Wavelet: {}
+
+featureClass:
+  firstorder: []
+  glcm: []
+  gldm: []
+
+setting:
+  label: 1
+
+  # Image normalization is performed in Python, so PyRadiomics normalization
+  # is disabled.
+  normalize: false
+
+  # Replaced programmatically for each extraction experiment.
+  binWidth: 10.0
+
+  resampledPixelSpacing: null
+  interpolator: 'sitkBSpline'
+  removeOutliers: null
+  correctMask: true
+  minimumROIDimensions: 2
+  minimumROISize: 20
+
+  # Extract two-dimensional features from the 25 x 25 center-slice crop.
+  force2D: true
+  force2Ddimension: 0
